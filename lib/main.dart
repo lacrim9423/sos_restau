@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sos_restau/home.dart';
 
 import 'singup.dart';
 
@@ -86,7 +87,12 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 30.00), // Reduce button height
