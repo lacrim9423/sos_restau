@@ -25,6 +25,7 @@ class _SignUpPage2State extends State<SignUpPage2> {
       if (pickedFile != null) {
         _image = File(pickedFile.path);
       } else {
+        // ignore: avoid_print
         print('No image selected.');
       }
     });

@@ -70,6 +70,19 @@ flutter:
      - assets/images/grocery.jpg
      - assets/images/fruits.jpg
 
+     - assets/images/fruits/watermelon.jpeg
+     - assets/images/fruits/peach.jpeg
+     - assets/images/fruits/pineapple.jpeg
+     - assets/images/fruits/apple.jpeg
+     - assets/images/fruits/orange.jpeg
+     - assets/images/fruits/mango.jpeg
+     - assets/images/fruits/strawberry.jpeg
+     - assets/images/fruits/kiwi.jpeg
+     - assets/images/fruits/grape.jpeg
+     - assets/images/fruits/banana.jpeg
+
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -7,70 +7,70 @@ class FruitsCategoryPage extends StatelessWidget {
       reference: 'APL001',
       price: 1.99,
       available: true,
-      image: 'assets/images/apple.jpg',
+      image: 'assets/images/fruits/apple.jpg',
     ),
     Fruit(
       name: 'Banana',
       reference: 'BNN001',
       price: 0.99,
       available: false,
-      image: 'assets/images/banana.jpg',
+      image: 'assets/images/fruits/banana.jpg',
     ),
     Fruit(
       name: 'Grape',
       reference: 'GRP001',
       price: 2.99,
       available: true,
-      image: 'assets/images/grape.jpg',
+      image: 'assets/images/fruits/grape.jpg',
     ),
     Fruit(
       name: 'Kiwi',
       reference: 'KWI001',
       price: 1.49,
       available: true,
-      image: 'assets/images/kiwi.jpg',
+      image: 'assets/images/fruits/kiwi.jpg',
     ),
     Fruit(
       name: 'Mango',
       reference: 'MNG001',
       price: 3.99,
       available: true,
-      image: 'assets/images/mango.jpg',
+      image: 'assets/images/fruits/mango.jpg',
     ),
     Fruit(
       name: 'Orange',
       reference: 'ORG001',
       price: 1.29,
       available: true,
-      image: 'assets/images/orange.jpg',
+      image: 'assets/images/fruits/orange.jpg',
     ),
     Fruit(
       name: 'Pineapple',
       reference: 'PNP001',
       price: 4.99,
       available: true,
-      image: 'assets/images/pineapple.jpg',
+      image: 'assets/images/fruits/pineapple.jpg',
     ),
     Fruit(
       name: 'Strawberry',
       reference: 'STB001',
       price: 2.49,
       available: false,
-      image: 'assets/images/strawberry.jpg',
+      image: 'assets/images/fruits/strawberry.jpg',
     ),
     Fruit(
       name: 'Watermelon',
       reference: 'WML001',
       price: 5.99,
       available: true,
-      image: 'assets/images/watermelon.jpg',
+      image: 'assets/images/fruits/watermelon.jpg',
     ),
     Fruit(
       name: 'Peach',
       reference: 'PCH001',
       price: 1.79,
       available: true,
-      image: 'assets/images/peach.jpg',
+      image: 'assets/images/fruits/peach.jpg',
     ),
   ];
 
@@ -175,102 +175,6 @@ class FruitsCategoryPage extends StatelessWidget {
                 label: 'Profil',
               ),
             ]));
-  }
-}
-
-class _FruitCard extends StatelessWidget {
-  final Fruit fruit;
-
-  const _FruitCard({Key? key, required this.fruit}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 2,
-              blurRadius: 5,
-              offset: const Offset(0, 3),
-            ),
-          ],
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              flex: 3,
-              child: ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  bottomLeft: Radius.circular(20),
-                ),
-                child: Image.asset(
-                  fruit.image,
-                  height: 120,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 4,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      fruit.name,
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      'Ref: ${fruit.reference}',
-                      style: Theme.of(context).textTheme.titleSmall,
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      '\$${fruit.price}',
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      fruit.isAvailable ? 'In stock' : 'Out of stock',
-                      style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                            color:
-                                fruit.isAvailable ? Colors.green : Colors.red,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Column(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.add),
-                  ),
-                  const SizedBox(height: 8),
-                  TextButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(Icons.add_shopping_cart),
-                    label: const Text('Add to cart'),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
 
